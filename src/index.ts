@@ -9,7 +9,11 @@ const port = process.env.PORT ?? 4000;
 
 const app = express();
 
-app.use("/", getThings);
+app.use("/things", getThings);
+
+app.use((req, res) => {
+  res.status(404).json({ error: "Endpoint not found" });
+});
 
 app.listen(port, () => {
   debug(chalk.blue(`Serve listening on http://localhost:${port}`));
