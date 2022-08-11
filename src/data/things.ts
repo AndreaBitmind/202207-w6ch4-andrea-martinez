@@ -1,8 +1,8 @@
 const things: string[] = [
-  "cuidar las plantas",
-  "beber cerveza",
-  "comer helado",
-  "leer",
+  "react",
+  "usar git",
+  "usar las dev tools",
+  "usar typescript",
 ];
 
 export default things;

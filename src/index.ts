@@ -9,5 +9,5 @@ const port = process.env.PORT ?? 4000;
 const app = express();
 
 app.listen(port, () => {
-  debug(chalk.blue(`Serve listening on http://localhost: ${port}`));
+  debug(chalk.blue(`Serve listening on http://localhost:${port}`));
 });
