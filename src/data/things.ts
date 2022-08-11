@@ -1,4 +1,4 @@
-interface Thing {
+export interface Thing {
   id: string;
   thing: string;
 }
