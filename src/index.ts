@@ -2,14 +2,14 @@ import "./loadEnvironment";
 import express from "express";
 import Debug from "debug";
 import chalk from "chalk";
-import getThings from "./controllers/controllers";
+import thingsRouter from "./routers/thingsRouter";
 
 const debug = Debug("api-rest-things-i-already-know:index.ts");
 const port = process.env.PORT ?? 4000;
 
 const app = express();
 
-app.use("/things", getThings);
+app.use("/things", thingsRouter);
 
 app.use((req, res) => {
   res.status(404).json({ error: "Endpoint not found" });
